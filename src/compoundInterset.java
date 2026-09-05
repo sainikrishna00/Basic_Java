@@ -16,8 +16,8 @@ public class compoundInterset {
         timeCompound = sc.nextInt();
         System.out.print("Enter the # of year : ");
         year = sc.nextInt();
-        amount = principal * Math.pow(1 + rate / timeCompound , timeCompound * year);
-        System.out.println("The amount after "+ year + " is : $" +amount);
+        amount = principal * Math.pow(1 + rate / timeCompound, timeCompound * year);
+        System.out.printf("The amount after %d yaers is $%.2f", year, amount);
         sc.close();
     }
 }
