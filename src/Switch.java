@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 public class Switch {
-    static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double num1;
         double num2;
-        double result;
+        boolean validoperation = true;
+        double result = 0.0;
         System.out.println("enter num1 : ");
         num1 = sc.nextDouble();
         System.out.println("enter num2 : ");
@@ -24,11 +25,15 @@ public class Switch {
                     result = num1 / num2;
                 }
             }
-            case (5) -> System.out.println();
+            case (5) -> result = Math.pow(num1, num2);
             default -> {
-                System.out.println();
-            sc.close();
+                System.out.println("invalid operator!");
+                validoperation = false;
             }
         }
+        if (validoperation) {
+            System.out.println(result);
+        }
+        sc.close();
     }
 }
