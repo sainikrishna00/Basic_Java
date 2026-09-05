@@ -11,7 +11,7 @@ public class tempConverter {
         System.out.println("convert to celcius or Fahrenheit ? (C or F):");
         unit = sc.next().toUpperCase();
         newTemp = (unit.equals("C")) ? (temp - 32) * 5/9 : (temp * 9 / 5) + 32;
-        System.out.println(newTemp + "°" + unit);
+        System.out.printf("%.2f°%s", newTemp,unit);
         sc.close();
     }
 }
