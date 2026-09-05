@@ -1,1 +1,1 @@
-Basic java program's for beginner or for practice..
+Basic java program's for practice..
