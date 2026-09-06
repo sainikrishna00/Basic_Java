@@ -2,9 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 public class Do_while {
     static void main() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("number gussing game!");
         Random random = new Random();
-        Scanner sc = new Scanner(System.in);
         int guess;
         int attempt = 0;
         int randomNum = random.nextInt(1,11);
