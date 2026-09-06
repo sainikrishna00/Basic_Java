@@ -7,13 +7,20 @@ public class Do_while {
         Random random = new Random();
         int guess;
         int attempt = 0;
-        int randomNum = random.nextInt(1,11);
-        System.out.println("Guess a number between 1 - 10");
+        int min = 1;
+        int max = 100;
+        int randomNum = random.nextInt(min,max+1);
+        System.out.printf("Guess a number between %d - %d" , min , max);
         do{
             System.out.println("enter a guess");
             guess = sc.nextInt();
-            if(guess > 10){
-                System.out.println("Guess a number between 1 - 10");
+            if(guess > max){
+                System.out.printf("Guess a number between %d - %d" , min , max);
+            }
+            if(guess < randomNum){
+                System.out.println("TOO LOW!");
+            }else if (guess > randomNum){
+                System.out.println("TOO HIGH!");
             }
             attempt++;
         }while(guess != randomNum);
